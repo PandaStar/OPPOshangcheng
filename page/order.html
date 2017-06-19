@@ -1,0 +1,108 @@
+
+	<h3 class="btn-info form-control">订单管理</h3>
+
+
+
+<div>
+  <ul class="nav nav-tabs" ng-init="vm.activeTab=1">
+    <li ng-class="{active: vm.activeTab == 1}"><a href="javascript:;" ng-click="vm.activeTab = 1">已加入购物车的商品</a></li>
+    <li ng-class="{active: vm.activeTab == 2}"><a href="javascript:;" ng-click="vm.activeTab = 2">订单退货处理</a></li>
+    <li ng-class="{active: vm.activeTab == 3}"><a href="javascript:;" ng-click="vm.activeTab = 3">配送管理</a></li>
+  </ul>
+  <div class="tab-content tab-bordered">
+    <div class="tab-panel" ng-show="vm.activeTab == 1">
+      	
+			<table border="" cellspacing="" cellpadding="" class="table table-striped"   >
+				<tr>
+					<th>全部</th>
+					<th>产品编号</th>
+					<th>产品名称</th>
+					<th>购买数量</th>
+					<th>产品单价</th>
+					<th>产品总价</th>
+					<th>操作</th>
+				</tr>
+				<tr ng-repeat="x in Product">
+					<td><input type="checkbox" ng-checked="selectAll"/></td>
+					<td>{{x.id}}</td>
+					<td>{{x.name}}</td>
+					<td>
+						<span ng-click="reduce($index)">-</span>
+						<input type="text" class="num" ng-model="x.quantity" ng-change="change($index)" />
+						<span ng-click="add($index)">+</span> 
+					</td>
+					<td>{{x.price}}</td>
+					<td>{{x.price * x.quantity}}</td>
+					<td><span ng-click="remove($index)" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i>移除</span></td>
+					
+       
+				</tr>
+			</table>
+			<input type="checkbox" ng-model="selectAll">
+			<span ng-hide="selectAll">全选</span>
+			<span ng-show="selectAll">取消全选</span>
+			<div id="foot"><span>总价:</span><span ng-bind="totalQuantity()"></span><span>购买数量</span>
+				<span>{{numAll()}}</span> <button class="btn-danger" ng-click="removeAll()"><i class="glyphicon glyphicon-remove"></i>清空购物车</button> </div>
+		
+    </div>
+    <div class="tab-panel" ng-show="vm.activeTab == 2">
+      	<h3>
+      		订单退货处理
+      	</h3>
+      	<section>
+			<table class="table table-striped">
+				<tr>
+					<th></th>
+					<th>序号</th>
+					<th>管理员</th>
+					<th>客户</th>
+					<th>联系方式</th>
+					<th>处理情况</th>
+					<th>处理日期</th>	
+					<th>删除</th>
+				</tr>
+				<tr> <!--doederby  排序-->
+					
+					<!--limitTo: 显示几条 ： 从几开始-->
+					<td><input type="checkbox" /></td>
+					<td>0001</td>
+					<td>小王</td>		
+					<td>李荣浩</td>
+					<td>13994541132</td>
+					<td>已退款</td>
+					<td>2017年5月21日 下午4:28</td>
+					<td><span class="close text-center" >&times;</span></td>
+				</tr>
+			</table>
+			
+		</section>
+		
+      	
+      	
+      	
+      	
+    </div>
+    <div class="tab-panel" ng-show="vm.activeTab == 3">
+      	<h3 class="bg-info form-control">
+      		OPPO官网商城一般都默认发顺丰速运，部分偏远地区会采用邮政EMS进行配送。
+      	</h3>
+      	<p>当前没有收到客户订单</p>
+      	
+      	<div class="dropdown">
+						  <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						    半夜梦苋她
+						    <span class="caret"></span>
+						  </a>
+						
+						  <ul class="dropdown-menu" aria-labelledby="dLabel">
+						  		<li><i class="glyphicon glyphicon-user"></i>半夜梦见她</li>
+						     <li>已登录时间:3小时</li>
+						    <li>注册时间：2017.5.26</li>
+						    <li>关闭</li>
+						  </ul>
+		</div>
+      	
+    </div>
+  </div>
+</div>
+

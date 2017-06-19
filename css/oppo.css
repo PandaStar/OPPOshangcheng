@@ -1,0 +1,191 @@
+@charset "UTF-8";
+header {
+  width: 100%;
+  height: 110px;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  line-height: 80px;
+}
+
+.toubu {
+  width: 100%;
+  height: 35px;
+  background: #009B72;
+  overflow: hidden;
+}
+.toubu .toubuli {
+  height: 35px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.toubu .toubuli .zuozi li {
+  list-style: none;
+  float: left;
+  border-left: 1px solid #47b488;
+  letter-spacing: normal;
+  margin: 8px 0px;
+  font-size: 13px;
+  color: #FFF;
+}
+.toubu .zuozi li a {
+  padding: 8px 20px 6px;
+  color: #FFF;
+  text-decoration: none;
+  line-height: 18px;
+}
+.toubu .zuozi li a:hover {
+  background: #57B488;
+}
+.toubu .sousuo {
+  width: 58px;
+  height: 35px;
+  margin-left: 820px;
+  text-align: center;
+}
+.toubu .sousuo img {
+  width: 22px;
+  height: 20px;
+  float: right;
+}
+.toubu .sousuo:hover {
+  background: #57B488;
+}
+.toubu .toubuli .youzi {
+  margin-top: -37px;
+  float: right;
+  margin-right: 27px;
+}
+.toubu .youzi li {
+  list-style: none;
+  float: left;
+  border-left: 1px solid #47b488;
+  letter-spacing: normal;
+  font-size: 13px;
+  color: #FFF;
+  line-height: 24px;
+}
+.toubu .youzi li a {
+  padding: 8px 20px 6px;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 13px;
+}
+.toubu .youzi li a:hover {
+  background: #57B488;
+}
+
+.ss {
+  width: 100%;
+  height: 92px;
+  position: absolute;
+  background: #ededed;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  display: none;
+}
+.ss .ssli {
+  height: 92px;
+  margin: 0 auto;
+  background: #ededed;
+}
+.ss .sk {
+  width: 588px;
+  height: 92px;
+  text-align: right;
+  float: right;
+}
+.ss .xsk {
+  width: 548px;
+  height: 52px;
+  text-align: right;
+  margin-top: 20px;
+}
+.ss .xsk .sk1 {
+  width: 414px;
+  height: 52px;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+  color: #CCCCCC;
+  float: left;
+}
+.ss .xsk .sk2 {
+  width: 132px;
+  height: 53px;
+  background: #2aad6f;
+  border: 1px solid #269d65;
+  color: #fff;
+  font-size: 16px;
+}
+
+.daohang {
+  margin: 0 auto;
+  overflow: hidden;
+}
+.daohang .daohangy {
+  width: 155px;
+  height: 58px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  float: right;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.daohang .daohangy p span {
+  margin-top: 20px;
+  color: #7b7b7b;
+  margin-left: 16px;
+  float: left;
+}
+.daohang .daohangy .gwc {
+  width: 29px;
+  height: 28px;
+  float: left;
+  margin-left: 30px;
+  background: url(../img/购物车.png);
+}
+.daohang .daohangy .yuan {
+  position: absolute;
+  z-index: 1;
+  background: #2aad6f;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-right: 40px;
+  float: left;
+}
+.daohang .daohangli img {
+  width: 190px;
+  height: 31px;
+  margin-top: 25px;
+}
+.daohang .daohangzi {
+  margin-right: 20px;
+  float: right;
+  margin-top: 33px;
+}
+.daohang .daohangzi .sc {
+  border-bottom: 3px solid #2AAD6F;
+  padding-bottom: 2px;
+}
+.daohang .daohangzi li {
+  float: left;
+  list-style: none;
+}
+.daohang .daohangzi li a {
+  text-decoration: none;
+  margin-left: 60px;
+  color: #7b7b7b;
+  font-size: 15px;
+  font-weight: bold;
+}
+.daohang .daohangzi li a:hover {
+  color: #000000;
+}
+
+/*# sourceMappingURL=oppo.css.map */

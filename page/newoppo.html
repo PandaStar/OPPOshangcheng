@@ -1,0 +1,68 @@
+<h3 class="btn-success form-control">
+	新品推荐
+</h3>
+<div class="panel panel-default" ng-class="{hidden: vm.hidden}">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <span class="glyphicon glyphicon-th-list"></span>
+      OPPO R11
+      <span class="pull-right">
+      <span class="glyphicon" ng-class="vm.collapsed?'glyphicon-chevron-down':'glyphicon-chevron-up'"
+            ng-click="vm.collapsed = !vm.collapsed"></span>
+        &nbsp;
+      <span class="glyphicon glyphicon-remove" ng-click="vm.hidden = true"></span>
+      </span>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" ng-class="{in: !vm.collapsed}">
+    <div class="panel-body">
+       <p>OPPO官方 <mark>V</mark>:</p>
+	<p>
+		OPPO R11人气持续上涨！因为高通旗舰影像处理器加持
+		#R11来了##OPPO明星家族##秘密树洞#OPPO R11人气持续上涨！因为高通旗舰影像处理器加持 与2016年时候的预期一样，今年的智能手机厂家都在主打“人像摄影”的牌，苹 果、华 为、小 米等品牌纷纷强调人像拍摄的魅力和创新。想法虽好，但如何能够从中脱颖而出呢？OPPO R11开了一个好头，5月16日，OPPO逐步将这款全新机型的信... 
+    </p>
+    <p class="pull-right">
+    	发表于4小时前
+    </p>
+    </div>
+  </div>
+</div>
+<span class="btn btn-primary" ng-click="vm.hidden = false" ng-if="vm.hidden">OPPO R11 上线了</span>
+
+
+
+<div >
+	
+	<h3 class="btn-success form-control">体验店</h3>
+	<section >
+			<div class="col-md-4">
+		  	<!--ng-options (  for   in  专用于select) ==  ng-if ( in )-->
+		    <select class="form-control" ng-model="vm.countries" ng-options="country.label for country in vm.country">
+		      <option value="">-- 请选择省份 --</option>
+		    </select>
+		  	</div>
+			  <div class="col-md-4" ng-if="vm.countries.provinces">
+			    <select class="form-control"
+			            ng-options="province.label for province in vm.countries.provinces" ng-model="vm.pro">
+			      <option value="">-- 请选择市县 --</option>
+			    </select>
+			  </div>
+			  <div class="col-md-4" ng-if="vm.pro.cities">
+			    <select class="form-control" ng-model="vm.city" ng-options="city.label for city in vm.pro.cities">
+			      <option value="">-- 请选择城市/县区 --</option>
+			    </select>
+			  </div>
+			  <br>
+			
+	</section>
+	<br>
+	<div>您选择的是：{{vm.countries.label}} - {{vm.pro.label}} - {{vm.city.label}}</div>
+	<iframe src="src/map.html" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
+	
+	
+</div>
+
+
+
+
+

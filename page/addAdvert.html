@@ -1,0 +1,117 @@
+<h3>
+	广告管理-添加广告
+</h3>
+<p class="btn-block btn-success">广告管理-添加广告</p>
+<section>
+
+	语言:
+	<select>
+		<option>简体中文</option>
+		<option>英语</option>
+		<option>俄语</option>
+		<option>韩语</option>
+	</select>
+
+	<br> 广告名称:
+	<input type="text" />
+	<br> 广告类型:
+	<select>
+		<option>图片</option>
+		<option>新闻</option>
+		<option>短信</option>
+		<option>视频</option>
+	</select>
+	<br> 
+	 广告文件:
+	<!--<div class="row imgs">
+		<canvas id="cvs" width="100" height="100"></canvas>
+		<span class="btn upload">上传文件<input type="file" class="upload_pic" id="upload" /></span>
+	</div>-->
+	<div class="row">
+		<div class="col-md-6">
+			单文件：<input ng-file-select type="file" />
+		</div>
+		<div class="col-md-6">
+			多文件：<input ng-file-select type="file" multiple/><br/>
+		</div>
+	</div>
+	<h4>当前队列 ({{ vm.uploader.queue.length }})</h4>
+	<table class="table">
+		<thead>
+			<tr>
+				<th width="50%">文件名</th>
+				<th ng-show="vm.uploader.isHTML5">大小</th>
+				<th ng-show="vm.uploader.isHTML5">进度</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in vm.uploader.queue">
+				<td><strong>{{ item.file.name }}</strong></td>
+				<td ng-show="vm.uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+				<td ng-show="vm.uploader.isHTML5">
+					<div class="progress" style="margin-bottom: 0;">
+						<div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+					</div>
+				</td>
+				<td class="text-center">
+					<span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+					<span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+					<span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+				</td>
+				<td nowrap>
+					<button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+			        <span class="glyphicon glyphicon-upload"></span>
+			      </button>
+								<button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+			        <span class="glyphicon glyphicon-ban-circle"></span>
+			      </button>
+								<button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+			        <span class="glyphicon glyphicon-trash"></span>
+			      </button>
+							</td>
+						</tr>
+		</tbody>
+				</table>
+	<div class="row">
+		
+		<h5>上传进度:</h5>
+		<div ng-class="{progress: true, 'progress-striped': vm.striped}">
+		  <div ng-class="['progress-bar', vm.style]" ng-style="{width: vm.value + '%'}">
+		    <div ng-if="vm.showLabel">{{vm.value}}%</div>
+		  </div>
+		</div>
+		
+		
+		
+	</div>
+		<button ng-model="vm.showLabel" class="btn btn-primary" ng-click="vm.value=100">上传</button>
+				
+				
+				
+				
+				
+				
+				<div>
+					<button type="button" class="btn btn-success btn-s" ng-click="vm.uploader.uploadAll()" ng-disabled="!vm.uploader.getNotUploadedItems().length">
+			    <span class="glyphicon glyphicon-upload"></span> 全部上传
+			  </button>
+					<button type="button" class="btn btn-warning btn-s" ng-click="vm.uploader.cancelAll()" ng-disabled="!vm.uploader.isUploading">
+			    <span class="glyphicon glyphicon-ban-circle"></span> 全部取消
+			  </button>
+					<button type="button" class="btn btn-danger btn-s" ng-click="vm.uploader.clearQueue()" ng-disabled="!vm.uploader.queue.length">
+			    <span class="glyphicon glyphicon-trash"></span> 全部移除
+			  </button>
+				</div>
+			
+				<br> 整理地址: <input type="text" />
+			
+				<div class="text-center">
+					<button type="submit">添加</button>
+					<button type="reset">重置</button>
+
+</section>
+
+
+		

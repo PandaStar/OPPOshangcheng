@@ -1,0 +1,91 @@
+<div class="row">
+			<div class="panel-group col-sm-3" id="accrodion"><!--面板组-->
+				<!--第一组-->
+				<div class="panel panel-default panel-success"><!--其中一个面板-->
+					<div class="panel-heading"><!--头部-->
+						<a data-toggle="collapse" data-parent="#accrodion" href="#collapseOne">商品管理</a>
+						<span class="badge">14</span>
+					</div>
+					<div class="panel-collapse collapse in" id="collapseOne">
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#/" class="list-group-item">系列商品管理</a>
+								<a href="#newoppo" class="list-group-item">新品上线推广</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--第二组-->
+				<div class="panel panel-default panel-danger"><!--其中一个面板-->
+					<div class="panel-heading"><!--头部-->
+						<a data-toggle="collapse" data-parent="#accrodion" href="#collapseTwo">订单管理</a>
+						<span class="badge">4</span>
+					</div>
+					<div class="panel-collapse collapse" id="collapseTwo">
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#order" class="list-group-item">订单管理</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--第三组-->
+				<div class="panel panel-default panel-info"><!--其中一个面板-->
+					<div class="panel-heading"><!--头部-->
+						<a data-toggle="collapse" data-parent="#accrodion" href="#collapseThree">广告管理</a>
+					</div>
+					<div class="panel-collapse collapse" id="collapseThree">
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#addAdvert" class="list-group-item">添加广告</a>
+								<a href="#Advert" class="list-group-item">广告管理</a>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default panel-warning"><!--其中一个面板-->
+					<div class="panel-heading"><!--头部-->
+						<a data-toggle="collapse" data-parent="#accrodion" href="#collapseFour">属性管理</a>
+					</div>
+					<div class="panel-collapse collapse" id="collapseFour">
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#attribute" class="list-group-item">销售管理</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default panel-success"><!--其中一个面板-->
+					<div class="panel-heading"><!--头部-->
+						<a data-toggle="collapse" data-parent="#accrodion" href="#collapseFive">权限管理</a>
+						<span class="badge">7</span>
+					</div>
+					<div class="panel-collapse collapse" id="collapseFive">
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#add" class="list-group-item glyphicon glyphicon-plus-sign" >添加管理员</a>
+								<a href="#VIP" class="list-group-item glyphicon glyphicon-pencil">管理员列表</a>
+								<a href="#person" class="list-group-item glyphicon glyphicon-pencil">修改用户密码</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default"><!--其中一个面板-->
+					<div class="panel-heading"><!--头部-->
+						<a data-toggle="collapse" data-parent="#accrodion" href="#collapseSix">关于我们</a>
+					</div>
+					<div class="panel-collapse collapse" id="collapseSix">
+						<div class="panel-body">
+							<div class="list-group">
+								<a href="#advise" class="list-group-item">建议意见</a>
+								<a href="#about" class="list-group-item">联系我们</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-9">
+				<div ng-view></div>
+			</div>
+		</div>

@@ -1,0 +1,33 @@
+<div>
+	<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">用户名:</label>
+    <!--<input id="username"type="text" placeholder="   请输入手机号码" class="sjh"><span id="msg"></span>
+	<p id="phonep"></p>
+    
+    <input id="password" type="password" placeholder="   请输入帐号密码" class="mm"><span id="msg1"></span>
+	<p id="PassWordP"></p>
+	
+	 <input type="button" value="立即注册" class="zc" id="register"/>-->
+	
+    <input type="tel" class="form-control" id="exampleInputEmail1"  ng-model="name" ng-pattern="/1[3578][0-9]{9}/"  placeholder="   请输入手机号" name="tel" id="tel" value="" required ng-model="b">
+    
+    	<span ng-if="form.tel.$dirty && form.tel.$valid">账号输入正确</span>
+		<span ng-if="form.tel.$dirty && form.tel.$error.required">账号不能为空</span>
+		<span ng-if="form.tel.$dirty && form.tel.$error.pattern">账号格式不正确</span>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">密码</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码">
+  </div>
+ 
+  <div class="checkbox">
+    <label>
+      <input type="checkbox">我已阅读并同意 <a class="ty" href="" target="_blank">《OPPO账号注册协议》</a>
+    </label>
+  </div>
+  <a href="../index.html"><button type="submit" class="btn btn-default">登录</button></a>
+</form>
+</div>
+	
+

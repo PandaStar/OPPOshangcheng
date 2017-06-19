@@ -1,0 +1,71 @@
+<div class="row">
+	<div  class="col-sm-4">
+		<select class="form-control" ng-model="str">
+			<option value="title">手机类型</option>
+			
+			<option value="price">价钱</option>
+			<option value="status">手机库存</option>
+			<option value="update">更新</option>
+		</select>
+	</div>
+	<div class="col-sm-4 col-sm-offset-4">
+		<input type="text" id="oppofilter"  class="form-control" ng-model="str2" placeholder="请输入手机类型"/>
+		<label for="oppofilter" id="label"></label>
+	</div>
+</div>	
+	<div class="panel panel-default" ng-repeat="oppo in oppos.datas | orderBy:str | filter:str2 |limitTo:x:y" >
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4">
+					
+					<a href="#/{{oppo.id}}" class="thumbnail" >
+
+						<img src="./img/{{oppo.id}}.png" alt="图片已损坏">
+
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4" >
+					<h2>{{oppo.title}}</h2>
+					<p class="lead text-danger "> {{oppo.price}}</p>
+					
+					
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4">
+					<p class="lead text-right {{oppo.status | statusColor}}">{{oppo.status | statusText}}</p>
+					<br>
+					
+					<button class="btn btn-primary pull-right">
+						<span class="glyphicon glyphicon-shopping-cart"></span>
+						{{oppo.price | currency:"￥"}}
+					</button>	
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<nav aria-label="Page navigation" class="text-center">
+			  <ul class="pagination">
+			    <li>
+			      <a href="javascript:void(0)" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			      </a>
+			    </li>
+			   <!-- <li ng-click="changePage($index)" ng-repeat="ophone in getA(data.length/x) track by $index"><a href="javascript:void(0)">{{$index+1}}</a></li>-->
+			    
+			    <li ng-click="y=x*0"><a href="javascript:void(0)">1</a></li>
+			    <li ng-click="y=x*1"><a href="javascript:void(0)">2</a></li>
+			    <li ng-click="y=x*2"><a href="javascript:void(0)">3</a></li>
+			    <li ng-click="y=x*3"><a href="javascript:void(0)">4</a></li>
+			    <li ng-click="y=x*4"><a href="javascript:void(0)">5</a></li>
+			    <li ng-click="y=x*5"><a href="javascript:void(0)">6</a></li>
+			    <li ng-click="y=x*6"><a href="javascript:void(0)">7</a></li>
+			    <li ng-click="y=x*7"><a href="javascript:void(0)">8</a></li>
+			    <li ng-click="y=x*8"><a href="javascript:void(0)">9</a></li>
+			    <li ng-click="y=x*9"><a href="javascript:void(0)">10</a></li>
+			    <li>
+			      <a href="javascript:void(0)" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+		</nav>

@@ -1,0 +1,51 @@
+		<h3> 公司信息管理 -管理员列表   </h3>
+
+		<section>
+			<input type="text" class="form-control" ng-model="str"/>
+			<table class="table table-striped">
+				<tr>
+					<th></th>
+					<th ng-click="oppo='Id';flag=!flag;">排序</th>
+					<th ng-click="oppo='Title';flag=!flag">管理员</th>
+					<th ng-click="oppo='Branck';flag=!flag;">部门</th>
+					<th ng-click="oppo='Phone';flag=!flag;">联系方式</th>
+					<th ng-click="oppo='PubDate';flag=!flag;">添加日期</th>
+					<th>修改</th>
+					<th>删除</th>
+				</tr>
+				<tr contenteditable="true" ng-repeat="oppo in data | orderBy:'Id':flag |filter:str | limitTo:x:y"> <!--doederby  排序-->
+					
+					<!--limitTo: 显示几条 ： 从几开始-->
+					<td><input type="checkbox" /></td>
+					<td>{{oppo.Id}}</td>
+					<td>{{oppo.Title | lowercase}}</td>		
+					<td>{{oppo.Branck| uppercase}}</td>
+					<td>{{oppo.Phone }}</td>
+					<td>{{oppo.PubDate |date:"yyyy年MM月dd日"}}</td>
+					<td><a href="javascript:void(0)"><i class="glyphicon glyphicon-check"></i></a></td>
+					<td><span class="close text-center" ng-click="hideFun($event,oppo.Title)">&times;</span></td>
+				</tr>
+			</table>
+			
+		</section>
+		<nav aria-label="Page navigation" class="text-center">
+			  <ul class="pagination">
+			    <li>
+			      <a href="javascript:void(0)" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			      </a>
+			    </li>
+			    <li ng-click="changePage($index)" ng-repeat="opp in getArr(data.length/x) track by $index"><a href="javascript:void(0)">{{$index+1}}</a></li>
+			    
+<!--			    
+			    <li ng-click="y=x*1"><a href="javascript:void(0)">2</a></li>
+			    <li ng-click="y=x*2"><a href="javascript:void(0)">3</a></li>
+			    <li ng-click="y=x*3"><a href="javascript:void(0)">4</a></li>
+			    <li ng-click="y=x*4"><a href="javascript:void(0)">5</a></li>-->
+			    <li>
+			      <a href="javascript:void(0)" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+		</nav>

@@ -1,0 +1,34 @@
+<header>
+	<h1>广告管理系统</h1>
+</header>
+<section>
+			<input type="text" class="form-control" placeholder="输入要查询的内容" ng-model="str"/>
+			<table  class="table table-striped">
+				<tr>
+					<th>全部</th>
+					<th ng-click="oppo='Id';flag=!flag;">排序</th>
+					<th ng-click="oppo='Title';flag=!flag">负责人</th>
+					<th ng-click="oppo='Branck';flag=!flag;">推广形式</th>
+					<th ng-click="oppo='Phone';flag=!flag;">联系方式</th>
+					<th ng-click="oppo='PubDate';flag=!flag;">添加日期</th>
+					<th>修改</th>
+					<th>删除</th>
+				</tr>
+				<tr  ng-repeat="oppo in data | orderBy:'Id':flag |filter:str | limitTo:x:y"> <!--doederby  排序-->
+					
+					<!--limitTo: 显示几条 ： 从几开始-->
+					<td><input type="checkbox" ng-checked="selectAll"/></td>
+					<td>{{oppo.Id}}</td>
+					<td>{{oppo.Title | lowercase}} </td>		
+					<td>{{oppo.Branck| uppercase}}</td>
+					<td>{{oppo.Phone}}</td>
+					<td>{{oppo.PubDate |date:"yyyy年MM月dd日"}}</td>
+					<td><a href="javascript:void(0)"><i class="glyphicon glyphicon-check"></i></a></td>
+					<td><span class="close text-center" ng-click="hideFun($event,oppo.Title)">&times;</span></td>
+				</tr>
+			</table>
+			<input type="checkbox" ng-model="selectAll">
+			<div class="btn btn-success" ng-click="all(master,tesarry)">全选</div>
+			<div class="btn btn-success" ng-click="reverse($event)">反选</div>
+			<div class="btn btn btn-danger" ng-click="delete() ">删除选中</div>
+		</section>

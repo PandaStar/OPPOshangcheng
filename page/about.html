@@ -1,0 +1,45 @@
+<header class="page-header">
+ 		<h3> 公司信息管理 -联系人列表   </h3>
+</header>
+		<section>
+			<input type="text" class="form-control" ng-model="str"/>
+			<table class="table table-striped">
+				<tr>
+					<th ng-click="oppo='Id';flag=!flag;">排序</th>
+					<th ng-click="oppo='Title';flag=!flag">联系人</th>
+					<th>部门</th>
+					<th>修改日期</th>
+					<th>添加日期</th>	
+					<th>删除</th>
+				</tr>
+				<tr ng-repeat="oppo in data | orderBy:'Id':flag |filter:str"> <!--doederby  排序-->
+				
+					<td>{{oppo.Id}}</td>
+					<td>{{oppo.Title | lowercase}}</td>		
+					<td>{{oppo.Branck| uppercase}}</td>
+					<td>{{oppo.Date }}</td>
+					<td>{{oppo.PubDate |date:"yyyy年MM月dd日"}}</td>
+					<td><span class="close text-center" ng-click="hideFun($event,oppo.Title)">&times;</span></td>
+				</tr>
+			</table>
+			
+		</section>
+		<nav aria-label="Page navigation" class="text-center">
+			  <ul class="pagination">
+			    <li>
+			      <a href="#" aria-label="Previous">
+			        <span aria-hidden="true">&laquo;</span>
+			      </a>
+			    </li>
+			    <li><a href="#">1</a></li>
+			    <li><a href="#">2</a></li>
+			    <li><a href="#">3</a></li>
+			    <li><a href="#">4</a></li>
+			    <li><a href="#">5</a></li>
+			    <li>
+			      <a href="#" aria-label="Next">
+			        <span aria-hidden="true">&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+		</nav>

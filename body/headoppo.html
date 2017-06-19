@@ -1,0 +1,95 @@
+<header>
+
+			<div class="toubu">
+				<div class="toubuli">
+				<ul class="zuozi">
+					<li><a href="" target="_blank">关于OPPO</a></li>
+					<li><a href="" target="_blank">ColorOS</a></li>
+					<li><a href="" target="_blank">新闻动态</a></li>
+					<li><a href="" target="_blank">服务设施</a></li>
+					<li><a href="" target="_blank">联系我们</a></li>
+				</ul>
+				<div class="sousuo" id="sousuo" onclick="change()">
+					<!--<img src="img/搜索(1).png">-->
+				</div>		
+	                <!--<div class="dropdown">
+							  <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							    半夜梦苋她
+							    <span class="caret"></span>
+							  </a>
+							
+							  <ul class="dropdown-menu" aria-labelledby="dLabel">
+							  		<li><i class="glyphicon glyphicon-user"></i>半夜梦见她</li>
+							     <li>已登录时间:3小时</li>
+							    <li>注册时间：2017.5.26</li>
+							    <li>关闭</li>
+							  </ul>
+					</div>-->
+				
+				
+                		
+                		
+                
+                <ul class="youzi">
+                	<li><a href="">半夜梦苋她<span class="caret"></span></a></li>
+                	<li><a href="oppo.html">退出</a></li>
+                	<li><a href="">Global</a></li>
+                </ul>
+			    </div>
+			</div>
+			
+			<div class="ss" id="ss">
+                <div class="ssli">
+                	<div class="sk">
+                		<div class="xsk">
+                			<input type="text" value="   搜索OPPO商店" class="sk1"/>
+                			<input type="button" value="搜索" class="sk2"/>
+                	    </div>
+                	</div>
+                </div>
+            </div>
+            
+		
+				<div class="daohang">
+					<div class="daohangy">
+						<p><span>购物车</span></p>
+						<div class="gwc"></div>
+						<span class="yuan">4</span>
+					</div>
+					<a  class="logo"><img src="img/oppo_logo.png"></a>
+						
+						<ul class="daohangzi">
+							<li>
+							
+							</li>
+							<!--<li><a href="javascript:void(0)"><b>首页</b></a></li>
+							<li><a href="javascript:void(0)"><b>产品</b></a></li>
+							<li><a href="javascript:void(0)" id="zxsc" class="sc"><b>在线商城</b></a></li>
+							<li><a href="javascript:void(0)"><b>体验店</b></a></li>
+							<li><a href="javascript:void(0)"><b>服务</b></a></li>-->
+						</ul>
+						<p id="Time" style="background: #C0C0C0;width: 200px;"></p>
+				</div>
+			
+		
+		</header>
+		
+
+		<script>
+		
+			
+		var ptime=document.getElementById("Time");
+		var timer=null;  //先定义一个定时器
+		var timer2=null;
+		//获取当前的时间的
+		function Ptime(){
+			//创建了一个时间对象
+			var day=new Date();
+			//把时间显示到p标签里
+			ptime.innerHTML=day.getFullYear()+"-"+(day.getMonth()+1)+"-"+day.getDate()+"-"+day.getHours()+"-"+day.getMinutes()+"-"+day.getSeconds();
+		}
+		Ptime();
+		//开一个定时器
+		timer=setInterval(Ptime,1000);
+	
+		</script>

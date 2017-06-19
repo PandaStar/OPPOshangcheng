@@ -1,0 +1,151 @@
+.dd{
+	/*width: 1264px;*/
+	width:100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.floor1{
+	width: 100%;
+	height: 34px;
+	background: #2aad6f;
+}
+.floor1li{
+	width: 960px;
+	height: 34px;
+	margin: 0 auto;
+}
+.floor1li .zi li{
+	width: 96px;
+	height: 34px;
+	float: left;
+	list-style: none;
+	font-size: 14px;
+	letter-spacing: normal;
+	border-left: 1px solid #57b488;
+	text-align: center;
+}
+.floor1li .zi li a{
+	text-decoration: none;
+    color: #FFFFFF;
+    line-height: 34px;
+}
+.floor1li li:hover{
+	background: #57B488;
+}
+.floor2{
+	width: 100%;
+	height: 518px;
+	margin-top: 110px;
+}
+.floor2li{
+	width: 320px;
+	height: 518px;
+	margin: 0 auto;
+}
+.floor2li .top{
+	width: 320px;
+	height: 74px;
+}
+.floor2li .top img{
+	width: 205px;
+	height: 34px;
+	margin-left: 63px;
+}
+.floor2li .top h3{
+    margin-top: 10px;
+    color: #363636;
+    text-align: center;
+    font-size: 15px;
+}
+.floor2li .text{
+	margin-top: 20px;
+}
+#UserNameP{
+	float: left;
+	color: #f00;
+	font-size: 12px;
+}
+#PassWordP{
+	float: left;
+	color: #f00;
+	font-size: 12px;
+}
+.yhm,.mm {
+	border: 1px solid #e2e2e2;
+	width: 320px;
+	height: 46px;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.floor2li .zhaohui{
+	font-size: 12px;
+   color: #00925f;
+   text-decoration: underline;
+   float: right;
+   margin-top: 10px;
+}
+.floor2li .dl{
+	width: 320px;
+	height: 46px;
+	background: #2aad6f;
+	font-size: 16px;
+	line-height: 46px;
+	color: #FFFFFF;
+	margin-top: 30px;
+}
+.dl:hover{
+	background: #57B488;
+}
+.text a{
+	text-decoration: none;
+	color: #000000;
+}
+.floor2li .zc{
+	width: 320px;
+	height: 46px;
+	background: #fff;
+	font-size: 16px;
+	line-height: 46px;
+	border: 1px solid #e2e2e2;
+	margin-top: 16px;
+}
+
+.zc:hover{
+	background: #e1e1e1;
+}
+.text img{
+	margin-top: 50px;
+}
+.tb{
+	margin-left: 50px;
+	margin-top: 20px;
+}
+.tb img{
+	margin-left: 16px;
+}
+.floor3{
+	width: 100%;
+	height: 65px;
+	text-align: center;
+	color: #7b7b7b;
+	font-size: 12px;
+	margin-top: 30px;
+}
+.floor3 p{
+	line-height: 65px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

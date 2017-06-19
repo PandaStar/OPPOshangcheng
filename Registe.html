@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="icon" href="img/oppo_logo.png"/>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" href="css/reset.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/reg.css" />
+	</head>
+	<body class="container" ng-controller="oppoCtrl">
+		<div ng-include="'page/oppohead.html'"></div>
+
+			<div class="floor2li">
+				<div class="top">
+					<h3>注册OPPO账号</h3>
+				</div>
+				
+				<form action="" name="form">
+					<input type="tel" ng-pattern="/1[3578][0-9]{9}/" class="form-control" name="tel" id="tel" value="" required="required" ng-model="name" placeholder="请用手机号注册"/>
+						<span ng-if="form.tel.$dirty && form.tel.$valid">通过</span>
+						<span ng-if="form.tel.$dirty && form.tel.$error.required">不能为空</span>
+					    <span ng-if="form.tel.$dirty && form.tel.$error.pattern">账号格式不正确</span>
+				    <br>
+				    <input type="password" ng-model="mima" ng-pattern=" /(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{6,16}$/" class="form-control" name="psd" id="password" required="required" placeholder="6-16个字母和数字组成"/>
+					    <span ng-if="form.psd.$dirty && form.psd.$error.required">不能为空</span>
+					    <!--<span ng-if="form.psd.$dirty && form.psd.$valid">通过</span>-->
+					    <span ng-if="form.psd.$dirty && form.psd.$error.pattern">密码必须由数字和字母组成</span>
+				    <br>
+					
+					<div class="checkbox">	
+	      				<input type="checkbox" ><a>我已阅读并同意</a> <a class="ty"  target="_blank">《OPPO账号注册协议》</a>	
+  					</div>
+					
+  					<input type="button" value="注册OPPO账号" class="btn btn-success form-control" ng-click="jump()" />
+					
+				</form>
+				
+				
+			</div>
+		<footer>
+			<p>© 2005 - 2017 东莞市永盛通信科技有限公司 版权所有 粤ICP备08130115号-1</p>
+		</footer>
+		<script src="js/angular_1.5.8.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/Register.js"></script>
+		
+
+	</body>
+</html>
